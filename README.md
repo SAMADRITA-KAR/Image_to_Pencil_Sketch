@@ -1,51 +1,75 @@
-# Image-to-Pencil-Sketch-Converter
+# Sales Predictor
+<div align="center">
 
-This simple Python program converts an image into a pencil sketch using CV2 library among other tools.
+![Python Badge](https://img.shields.io/badge/python-3.x-blue?logo=python) ![Pandas Badge](https://img.shields.io/badge/Pandas-Library%20-red) ![Numpy Badge](https://img.shields.io/badge/Numpy-Library%20Used-lightgrey) ![Matplotlib Badge](https://img.shields.io/badge/Matplotlib-Library%20-yellow) ![Seaborn Badge](https://img.shields.io/badge/Seaborn-Library%20Used-yellowgreen) 
+![Tensorflow Badge](https://img.shields.io/badge/Tensorflow-Library%20Used-green)
 
-## Description
+*Making Forecasting Easy Because Knowing The Future Trends Is A Superpower!!*
 
-The conversion process includes changing the picture to grayscale, inverting the image, smoothing the image, and finally converting to a pencil sketch by dividing the grayscale image by the inverse of the smoothened image.
+</div>
 
-## How to Run the Program
+## :dart: **About**
+**Sales Predictor**, a robust tool, implemented in Python, is perfect for organisations that wish to utilise their historical sales data to predict future sales trends. It showcases how data-driven decisions can skyrocket business success! 
 
-1. Import necessary libraries: CV2, Numpy, Seaborn, and Matplotlib.
-2. Load the image and convert it to RGB using CV2.
-3. Show the original image using Matplotlib.
-4. Convert the original RBG formatted image to grayscale.
-5. Invert the grayscale image.
-6. Implement the smoothing function on the inverted image.
-7. Derive the final sketch by dividing the grayscale image by the inverted smoothed image.
-8. Finally, plot the final pencil sketch image.
+---
 
-## Libraries Used
+## :pushpin: **Table of Contents**
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Key Features](#key-features)
+- [Libraries Used](#libraries-used)
+- [Data Handling](#data-handling)
+- [Support and Contribution](#support-and-contribution)
+- [License](#license)
+---
 
-- CV2 to work with images.
-- Numpy for numerical operations.
-- Seaborn for advanced plotting.
-- Matplotlib.pyplot to visualize images in Python.
+## :computer: **Getting Started**
+Start Harnessing the power of Machine Learning to predict your future sales. 
 
-## Results
+Clone this repository to your machine & upload the notebook files to *Google Colab* or run in a *Jupyter Notebook* environment.
 
-The final output is a pencil sketch of the original image. Below are the images to illustrate this:
+## :package: **Installation**
 
-- Original Image
-- Grayscale Image
-- Inverted Image
-- Smoothened (also Inverted) Image
-- Final Pencil Sketch
+The Project uses the power of several python libraries, which can be installed using pip command:
 
-## Project Files
+- csv
+- numpy
+- pandas
+- seaborn
+- tensorflow
+- keras
+- matplotlib
+ sklearn.linear_model
+- sklearn.model_selection
 
-The project is hosted on a Jupyter Notebook file called "Image to Pencil Sketch.ipynb". The link to the Colab notebook is [here](https://colab.research.google.com/drive/1Oi3g16iKOE6xXEfuyTOoT4giEwGywhYq?usp=drive_link#printMode=true).
+## :rocket: **Usage**
 
-## Environment Requirements
+Begin with running `Sales_Predictor.ipynb` in your preferred notebook environment.
 
-Python 3.x and the above-mentioned libraries. The program is currently written to be executed in Google Colab, but it can be run on any Python-supported platform.
+## :tada: **Key Features**
 
-## To Execute
+Sales Predictor enfolds several powerful features:
 
-Simply upload the "Image to Pencil Sketch.ipynb" in Google Colab and run it.
+- Extensive data analysis
+- Crisp visualisations
+- Heatmaps for better understanding of data correlations
+- Implementation of deep learning with *Tensorflow* and *Keras*
+- Comprehensive performance evaluation metrics
 
-## Acknowledgements
+## :books: **Libraries Used**
 
-This project wouldn't have been successful without the help and contribution of the passionate developers in the open-source community. Their hard work and open collaboration inspired me to implement the project and provided me all the resources to get me started.
+Sales Predictor extensively uses several Python Libraries like CSV, Numpy, Pandas, Seaborn, Matplotlib and Sklearn beside TensorFlow and Keras for accurate predictions.
+
+## :page_facing_up: **Data Handling**
+
+The project primarily uses CSV-formatted datasets. Comprehensive pre-processing is performed, addressing potential null values in datasets along with beautiful heatmap representations to visualize correlations.
+
+## :handshake: **Support and Contribution**
+
+Feel free to fork the project, post issues, raise pull requests or provide feedback. Don't forget to star the repo, if you like our project!
+
+## :memo: **License**
+The Project is licensed under [MIT](https://choosealicense.com/licenses/mit/) License.
+
+---  
