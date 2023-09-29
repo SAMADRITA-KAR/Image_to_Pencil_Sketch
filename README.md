@@ -1,75 +1,100 @@
-# Sales Predictor
-<div align="center">
+# Pencil Sketch Image Transformer
 
-![Python Badge](https://img.shields.io/badge/python-3.x-blue?logo=python) ![Pandas Badge](https://img.shields.io/badge/Pandas-Library%20-red) ![Numpy Badge](https://img.shields.io/badge/Numpy-Library%20Used-lightgrey) ![Matplotlib Badge](https://img.shields.io/badge/Matplotlib-Library%20-yellow) ![Seaborn Badge](https://img.shields.io/badge/Seaborn-Library%20Used-yellowgreen) 
-![Tensorflow Badge](https://img.shields.io/badge/Tensorflow-Library%20Used-green)
+This Python-based project uses OpenCV, NumPy, Seaborn, and Matplotlib to transform regular images into pencil sketches. 
 
-*Making Forecasting Easy Because Knowing The Future Trends Is A Superpower!!*
+## Table of Contents
 
-</div>
+1. [Getting Started](#getting-started)
+2. [Prerequisites](#prerequisites)
+3. [Usage](#usage)
+4. [Results](#results)
+5. [Contributing](#contributing)
+6. [License](#license)
 
-## :dart: **About**
-**Sales Predictor**, a robust tool, implemented in Python, is perfect for organisations that wish to utilise their historical sales data to predict future sales trends. It showcases how data-driven decisions can skyrocket business success! 
+## Getting Started
 
----
+Clone the repository onto your local machine and install the required dependencies to get a local copy up and running.
 
-## :pushpin: **Table of Contents**
-- [Getting Started](#getting-started)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Key Features](#key-features)
-- [Libraries Used](#libraries-used)
-- [Data Handling](#data-handling)
-- [Support and Contribution](#support-and-contribution)
-- [License](#license)
----
+## Prerequisites
 
-## :computer: **Getting Started**
-Start Harnessing the power of Machine Learning to predict your future sales. 
+The following Python packages are needed:
 
-Clone this repository to your machine & upload the notebook files to *Google Colab* or run in a *Jupyter Notebook* environment.
+- OpenCV
+- NumPy
+- Seaborn
+- Matplotlib
 
-## :package: **Installation**
+To install the packages using pip, run:
 
-The Project uses the power of several python libraries, which can be installed using pip command:
+```bash
+ pip install opencv-python numpy seaborn matplotlib 
+```
+Usage
+Load the image and use the following commands to convert it to a pencil sketch:
+# Import libraries
+import cv2
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-- csv
-- numpy
-- pandas
-- seaborn
-- tensorflow
-- keras
-- matplotlib
- sklearn.linear_model
-- sklearn.model_selection
+# Load and plot the image
+i=cv2.imread("Portrait.jpg")
+i=cv2.cvtColor(i,cv2.COLOR_BGR2RGB)
 
-## :rocket: **Usage**
+plt.figure(figsize= (6,6))
+plt.imshow(i)
+plt.axis("off")
+plt.title("Original")
+plt.show()
 
-Begin with running `Sales_Predictor.ipynb` in your preferred notebook environment.
+# Convert image to grayscale
+ig = cv2.cvtColor(i, cv2.COLOR_BGR2GRAY)
 
-## :tada: **Key Features**
+plt.figure(figsize= (6,6))
+plt.imshow(ig, cmap="gray")
+plt.axis("off")
+plt.title("Grayscale")
+plt.show()
 
-Sales Predictor enfolds several powerful features:
+# Invert the image
+im = 255 - ig
 
-- Extensive data analysis
-- Crisp visualisations
-- Heatmaps for better understanding of data correlations
-- Implementation of deep learning with *Tensorflow* and *Keras*
-- Comprehensive performance evaluation metrics
+plt.figure(figsize= (6,6))
+plt.imshow(im, cmap="gray")
+plt.axis("off")
+plt.title("Inverted")
+plt.show()
 
-## :books: **Libraries Used**
+# Smoothen the image
+bi = cv2.GaussianBlur(im, (21,21), sigmaX=0, sigmaY=0)
 
-Sales Predictor extensively uses several Python Libraries like CSV, Numpy, Pandas, Seaborn, Matplotlib and Sklearn beside TensorFlow and Keras for accurate predictions.
+plt.figure(figsize= (6,6))
+plt.imshow(bi, cmap="gray")
+plt.axis("off")
+plt.title("Smoothened")
+plt.show()
 
-## :page_facing_up: **Data Handling**
+# Final sketch
+f = cv2.divide(ig, 255 - bi, scale=255)
 
-The project primarily uses CSV-formatted datasets. Comprehensive pre-processing is performed, addressing potential null values in datasets along with beautiful heatmap representations to visualize correlations.
+plt.figure(figsize= (6,6))
+plt.imshow(f, cmap="gray")
+plt.axis("off")
+plt.title("Final Sketch")
+plt.show()
 
-## :handshake: **Support and Contribution**
+## Results
 
-Feel free to fork the project, post issues, raise pull requests or provide feedback. Don't forget to star the repo, if you like our project!
+The final output is a beautiful pencil sketch of the original image.
 
-## :memo: **License**
-The Project is licensed under [MIT](https://choosealicense.com/licenses/mit/) License.
+## Contributing
 
----  
+For major changes, please open an issue first to discuss what you would like to change. Contributions are always welcome!
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for more information.
+
+Remember to update this README template with your specific paths, names, or other details as necessary.
+
+
