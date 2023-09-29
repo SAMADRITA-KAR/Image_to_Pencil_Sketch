@@ -1,100 +1,73 @@
 # Pencil Sketch Image Transformer
+<div align="center">
 
-This Python-based project uses OpenCV, NumPy, Seaborn, and Matplotlib to transform regular images into pencil sketches. 
+![Python Badge](https://img.shields.io/badge/python-3.x-blue?logo=python) ![OpenCV Badge](https://img.shields.io/badge/OpenCV-Library%20Used-red) ![NumPy Badge](https://img.shields.io/badge/NumPy-Library%20Used-lightgrey) ![Seaborn Badge](https://img.shields.io/badge/Seaborn-Library%20Used-yellow) ![Matplotlib Badge](https://img.shields.io/badge/Matplotlib-Library%20Used-yellowgreen)
 
-## Table of Contents
+*Image Transformation has never been so easy! Turn your photos into authentic pencil sketches!*
 
-1. [Getting Started](#getting-started)
-2. [Prerequisites](#prerequisites)
-3. [Usage](#usage)
-4. [Results](#results)
-5. [Contributing](#contributing)
-6. [License](#license)
+</div>
 
-## Getting Started
+## :dart: **About**
+**Pencil Sketch Image Transformer** is a project implemented in Python, where images are transformed into stunning pencil sketches using the power of OpenCV. It brings the artist in you to life, crafting hand-drawn sketches from digital images!
 
-Clone the repository onto your local machine and install the required dependencies to get a local copy up and running.
+---
 
-## Prerequisites
+## :pushpin: **Table of Contents**
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Key Features](#key-features)
+- [Libraries Used](#libraries-used)
+- [Results](#results)
+- [Contributing](#contributing)
+- [Author](#Author)
 
-The following Python packages are needed:
+---
 
-- OpenCV
-- NumPy
-- Seaborn
-- Matplotlib
+## :computer: **Getting Started**
+Git clone this repository or download the files `Image to Pencil Sketch.ipynb` in your local machine. The notebook file can be viewed in a Jupyter Notebook environment or Google Colab.
 
-To install the packages using pip, run:
+## :package: **Installation**
 
-```bash
- pip install opencv-python numpy seaborn matplotlib 
-```
-Usage
-Load the image and use the following commands to convert it to a pencil sketch:
-# Import libraries
-import cv2
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
+This Project uses the following Python libraries, which can be installed using pip:
 
-# Load and plot the image
-i=cv2.imread("Portrait.jpg")
-i=cv2.cvtColor(i,cv2.COLOR_BGR2RGB)
+- opencv-python
+- numpy
+- seaborn
+- matplotlib
 
-plt.figure(figsize= (6,6))
-plt.imshow(i)
-plt.axis("off")
-plt.title("Original")
-plt.show()
+## :rocket: **Usage**
 
-# Convert image to grayscale
-ig = cv2.cvtColor(i, cv2.COLOR_BGR2GRAY)
+Open the `Image to Pencil Sketch.ipynb` notebook. Run the code cells from top to bottom using your preferred Editor/IDE or Jupyter notebook.
 
-plt.figure(figsize= (6,6))
-plt.imshow(ig, cmap="gray")
-plt.axis("off")
-plt.title("Grayscale")
-plt.show()
+## :tada: **Key Features**
 
-# Invert the image
-im = 255 - ig
+Pencil Sketch Image Transformer provides:
 
-plt.figure(figsize= (6,6))
-plt.imshow(im, cmap="gray")
-plt.axis("off")
-plt.title("Inverted")
-plt.show()
+- Easy to use Python notebook for transforming images to pencil sketches.
+- Implementation of OpenCV library for image processing.
+- In-depth image processing operations including grayscale, inversion, and smoothing.
 
-# Smoothen the image
-bi = cv2.GaussianBlur(im, (21,21), sigmaX=0, sigmaY=0)
+## :books: **Libraries Used**
 
-plt.figure(figsize= (6,6))
-plt.imshow(bi, cmap="gray")
-plt.axis("off")
-plt.title("Smoothened")
-plt.show()
+Pencil Sketch Image Transformer uses several Python Libraries like `OpenCV`, `NumPy`, `Seaborn`, and `Matplotlib` for transforming and visualizing images.
 
-# Final sketch
-f = cv2.divide(ig, 255 - bi, scale=255)
+## :art: **Results**
 
-plt.figure(figsize= (6,6))
-plt.imshow(f, cmap="gray")
-plt.axis("off")
-plt.title("Final Sketch")
-plt.show()
+Create authentic pencil sketches from any digital image with user-friendly and interactive transformation steps.
 
-## Results
+## :handshake: **Contributing**
 
-The final output is a beautiful pencil sketch of the original image.
+For Major changes, feel free to open an issue to discuss what you would like to change. Contributions and feedback are always welcome!
 
-## Contributing
+## :memo: **Author**
 
-For major changes, please open an issue first to discuss what you would like to change. Contributions are always welcome!
+### [Samadrita Kar]
 
-## License
+- GitHub: [@Samadrita_Kar](https://github.com/SAMADRITA-KAR)
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for more information.
+If you find this project helpful or use it in your work, I'd appreciate a shoutout or a star ⭐️ on GitHub.
 
-Remember to update this README template with your specific paths, names, or other details as necessary.
+Thank you for using and contributing to this project!
 
-
+---  
